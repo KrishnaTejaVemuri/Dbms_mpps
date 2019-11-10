@@ -65,7 +65,7 @@ public class Mppsexamdaoimpl implements Mppsexamdao{
 	@Override
 	public void addMppsexam(Mppsexam Mppsexam) {
 		// TODO Auto-generated method stub
-		String qry="insert into Mppsexam(examid,examname,mppssid,marksobtained,maxmarks)) values (:examid,:examname,:mppssid,:marksobtained,:maxmarks)";
+		String qry="insert into mppsexam(examid,examname,mppssid,marksobtained,maxmarks) values (:examid,:examname,:mppssid,:marksobtained,:maxmarks)";
 		npjt.update(qry, gSPBM(Mppsexam));
 	}
 

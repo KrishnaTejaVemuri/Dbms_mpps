@@ -65,7 +65,7 @@ public class Middaymealsdaoimpl implements Middaymealsdao{
 	@Override
 	public void addMiddaymeals(Middaymeals Middaymeals) {
 		// TODO Auto-generated method stub
-		String qry="insert into middaymeals(mdmid,noofstudentsate,date,msid,staffid)) values (:mdmid,:noofstudentsate,:date,:msid,:staffid)";
+		String qry="insert into middaymeals(mdmid,noofstudentsate,date,msid,staffid) values (:mdmid,:noofstudentsate,:date,:msid,:staffid)";
 		npjt.update(qry, gSPBM(Middaymeals));
 	}
 

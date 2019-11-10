@@ -4,14 +4,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.school.MPPS.Model.Healthlog;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
-
-import com.school.MPPS.Model.Healthlog;
 @Repository
 public class Healthlogdaoimpl implements Healthlogdao{
 	NamedParameterJdbcTemplate npjt;
@@ -63,7 +63,7 @@ public class Healthlogdaoimpl implements Healthlogdao{
 	@Override
 	public void addHealthlog(Healthlog Healthlog) {
 		// TODO Auto-generated method stub
-		String qry="insert into healthlog(checkupid,date,problem,sid)) values (:checkupid,:date,:problem,:sid)";
+		String qry="insert into healthlog(checkupid,date,problem,sid) values (:checkupid,:date,:problem,:sid)";
 		npjt.update(qry, gSPBM(Healthlog));
 	}
 
@@ -88,5 +88,11 @@ public class Healthlogdaoimpl implements Healthlogdao{
 		String qry="SELECT * FROM healthlog WHERE checkupid=:checkupid";
 		return npjt.queryForObject(qry,gSPBM(new Healthlog(id)),new Mappingrow());
 		}
-
+	@Override
+	public List<Healthlog> ListstudentHealthlogs(String id) {
+		// TODO Auto-generated method stub
+		String qry="SELECT * FROM healthlog where sid=:sid";
+		List<Healthlog> stds=npjt.query(qry,gSPBM(new Healthlog(id)) , new Mappingrow());
+		return stds;
+	}
 }

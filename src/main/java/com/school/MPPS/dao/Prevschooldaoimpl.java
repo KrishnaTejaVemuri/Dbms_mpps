@@ -60,14 +60,14 @@ public class Prevschooldaoimpl implements Prevschooldao{
 	@Override
 	public void addPrevschool(Prevschool Prevschool) {
 		// TODO Auto-generated method stub
-		String qry="insert into prevschool(schoolid,schoolname,contactno)) values (:schoolid,:schoolname,:contactno)";
+		String qry="insert into prevschool(schoolid,schoolname,contactno) values (:schoolid,:schoolname,:contactno)";
 		npjt.update(qry, gSPBM(Prevschool));
 	}
 
 	@Override
 	public void updatePrevschool(Prevschool Prevschool) {
 		// TODO Auto-generated method stub
-		String qry="UPDATE prevschool set schoolname=:schoolname where schoolid=:schoolid";
+		String qry="UPDATE prevschool set schoolname=:schoolname, contactno=:contactno where schoolid=:schoolid";
 		npjt.update(qry, gSPBM(Prevschool));
 	}
 

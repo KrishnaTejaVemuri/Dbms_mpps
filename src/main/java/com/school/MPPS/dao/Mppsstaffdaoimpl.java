@@ -65,7 +65,7 @@ public class Mppsstaffdaoimpl implements Mppsstaffdao{
 		@Override
 		public void addMppsstaff(Mppsstaff Mppsstaff) {
 			// TODO Auto-generated method stub
-			String qry="insert into mppsstaff(staffid,stname,work,staffphone,gender)) values (:staffid,:stname,:work,:staffphone,:gender)";
+			String qry="insert into mppsstaff(staffid,stname,work,staffphone,gender) values (:staffid,:stname,:work,:staffphone,:gender)";
 			npjt.update(qry, gSPBM(Mppsstaff));
 		}
 

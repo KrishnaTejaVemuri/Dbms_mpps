@@ -71,14 +71,14 @@ public class MppsstudentdaoImpl implements Mppsstudentdao{
 	@Override
 	public void addMppsstudent(Mppsstudent MppsStudent) {
 		// TODO Auto-generated method stub
-		String qry="insert into mppsstudent(mppssid,firstname,lastname,age,caste,gender,schoolid,classid)) values (:mppssid,:firstname,:lastname,:age,:caste,:gender,:schoolid,:classid)";
+		String qry="insert into mppsstudent(mppssid,firstname,lastname,age,caste,gender,schoolid,classid) values (:mppssid,:firstname,:lastname,:age,:caste,:gender,:schoolid,:classid)";
 		npjt.update(qry, gSPBM(MppsStudent));
 	}
 
 	@Override
 	public void updateMppsstudent(Mppsstudent MppsStudent) {
 		// TODO Auto-generated method stub
-		String qry="UPDATE mppsstudent set firstname=:firstname,lastname=:lastname,age=:age,gender=:gender,schoolid=:schoolid,classid=:classid where mppssid=:mppssid";
+		String qry="UPDATE mppsstudent set firstname=:firstname,lastname=:lastname,age=:age,caste=:caste,gender=:gender,schoolid=:schoolid,classid=:classid where mppssid=:mppssid";
 		npjt.update(qry, gSPBM(MppsStudent));	
 	}
 

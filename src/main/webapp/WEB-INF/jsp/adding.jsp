@@ -1,7 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,27 +11,37 @@
 <title>Insert title here</title>
 </head>
 <body>
-<spring:url value="/user/save" var="saveURL" />
+<spring:url value="/authorityvisit/save" var="saveURL" />
  <form:form modelAttribute="userForm" method="post" action="${saveURL }" >
-  <form:hidden path="id"/>
+  <form:hidden path="Auid"/>
   <table>
    <tr>
-    <td>First name: </td>
+    <td>Authority name: </td>
     <td>
-     <form:input path="firstname"/>
+     <form:input path="Authname"/>
     </td>
    </tr>
    <tr>
-    <td>Last name: </td>
+    <td>Designation </td>
     <td>
-     <form:input path="lastname"/>
+     <form:input path="Designation"/>
+    </td>
+   </tr>
+   
+   <tr>
+    <td>Date of visit </td>
+    <td>
+     <form:input path="Dov"/>
+    </td>
+   </tr>
+   
+   <tr>
+    <td>Remarks </td>
+    <td>
+     <form:input path="Remarks"/>
     </td>
    </tr>
    <tr>
-    <td>Address: </td>
-    <td>
-     <form:input path="address"/>
-    </td>
    </tr>
    <tr>
     <td></td>

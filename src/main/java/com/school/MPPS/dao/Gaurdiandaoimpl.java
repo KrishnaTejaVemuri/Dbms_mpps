@@ -64,14 +64,14 @@ public class Gaurdiandaoimpl implements Mppsgaurdiandao{
 	@Override
 	public void addGaurdian(Gaurdian Gaurdian) {
 		// TODO Auto-generated method stub
-		String qry="insert into gaurdian(mppsgid,mppssid,relation,gname)) values (:mppssid,:mppsgid,:relation,:gname)";
+		String qry="insert into gaurdian(mppsgid,mppssid,relation,gname) values (:mppsgid,:mppssid,:relation,:gname)";
 		npjt.update(qry, gSPBM(Gaurdian));
 	}
 
 	@Override
 	public void updateGaurdian(Gaurdian Gaurdian) {
 		// TODO Auto-generated method stub
-		String qry="UPDATE gaurdian set mppssid=:mppssid,gname=:gname,relation-:relation where mppsgid=:mppsgid";
+		String qry="UPDATE gaurdian set mppssid=:mppssid,gname=:gname,relation=:relation where mppsgid=:mppsgid";
 		npjt.update(qry, gSPBM(Gaurdian));
 	}
 

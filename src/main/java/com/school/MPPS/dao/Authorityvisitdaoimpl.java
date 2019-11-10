@@ -66,7 +66,7 @@ public class Authorityvisitdaoimpl implements Authoritiesvisitdao{
 	@Override
 	public void addAuthoritiesvisit(Authoritiesvisit Authoritiesvisit) {
 		// TODO Auto-generated method stub
-		String qry="insert into authoritiesvisit(auid,authname,designation,dov,remarks)) values (:auid,:authname,:designation,:dov,:remarks)";
+		String qry="insert into authoritiesvisit(authname,designation,dov,remarks) values (:authname,:designation,:dov,:remarks)";
 		npjt.update(qry, gSPBM(Authoritiesvisit));
 	}
 

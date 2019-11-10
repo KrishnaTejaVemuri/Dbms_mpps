@@ -58,7 +58,7 @@ public class Mppsclassdaoimpl implements Mppsclassdao{
 	@Override
 	public void addMppsclass(Mppsclass Mppsclass) {
 		// TODO Auto-generated method stub
-		String qry="insert into mppsclass(classid,roomno)) values (:classid,:roomno)";
+		String qry="insert into mppsclass(classid,roomno) values (:classid,:roomno)";
 		npjt.update(qry, gSPBM(Mppsclass));
 	}
 

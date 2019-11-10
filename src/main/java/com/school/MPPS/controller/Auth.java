@@ -11,9 +11,12 @@ public class Auth {
         return "login";
     }
 
-    @RequestMapping("/logout-success")
+    @RequestMapping("/logout")
     public String logoutPage() {
         return "logout";
     }
-
+    @RequestMapping("/logout-success")
+    public String logoutsuccussPage() {
+        return "logout-success";
+    }
 }

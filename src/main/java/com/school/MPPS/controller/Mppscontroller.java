@@ -3,6 +3,7 @@ package com.school.MPPS.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,14 +18,17 @@ public class Mppscontroller {
 	@Autowired
 	 Mppsstudentservice msd;
 	 
-	 @RequestMapping(value="/list", method=RequestMethod.GET)
+	 @RequestMapping(value="/", method=RequestMethod.GET)
 	 public ModelAndView list(){
-	  ModelAndView model = new ModelAndView("/Test_page");
+	  ModelAndView model = new ModelAndView("/indexfile");
 	  
-	 List<Mppsstudent> lst = msd.Listallstudents();
-	  //MppsStudent lst=new MppsStudent(); 
-	  model.addObject("listMppsStudent", lst);
 	  
 	  return model;
+	 }
+	 @ExceptionHandler
+	 public ModelAndView handleexception(Exception e) {
+		 ModelAndView model = new ModelAndView("error");
+		 model.addObject("errorOccured",e.getMessage());
+		 return model;
 	 }
 }

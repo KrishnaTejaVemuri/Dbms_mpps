@@ -8,13 +8,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
-<title>User Page</title>
+<title>authorityvisit Page</title>
 </head>
 <body>
- <spring:url value="/user/add" var="addURL" />
- <a href="${addURL }">Add User</a>
+ <spring:url value="/authorityvisit/add" var="addURL" />
+ <a href="${addURL }">Add authorityvisit</a>
 
- <h1>Users List</h1>
+ <h1>authorityvisits List</h1>
  <table width="100%" border="1">
   <tr>
    <th>ID</th>
@@ -23,18 +23,17 @@
    <th>Address</th>
    <th colspan="2">Action</th>
   </tr>
-  <c:forEach items="${listUser }" var="user" >
+  <c:forEach items="${listUser }" var="authorityvisit" >
    <tr>
-    <td>${user.id }</td>
-    <td>${user.firstname }</td>
-    <td>${user.lastname }</td>
-    <td>${user.address }</td>
+    <td>${authorityvisit.auid }</td>
+    <td>${authorityvisit.firstname }</td>
+    <td>${authorityvisit.lastname }</td>
     <td>
-     <spring:url value="/user/update/${user.id }" var="updateURL" />
+     <spring:url value="/authorityvisit/update/${authorityvisit.auid }" var="updateURL" />
      <a href="${updateURL }">Update</a>
     </td>
     <td>
-     <spring:url value="/user/delete/${user.id }" var="deleteURL" />
+     <spring:url value="/authorityvisit/delete/${authorityvisit.auid }" var="deleteURL" />
      <a href="${deleteURL }">Delete</a>
     </td>
    </tr>    

@@ -34,6 +34,7 @@ public class Mppsteacherdaoimpl implements Mppsteacherdao{
 			   Sd.setCaste(rs.getString("caste"));
 			   Sd.setCat(rs.getString("cat"));
 			   Sd.setEdq(rs.getString("edq"));
+			   Sd.setUserid(rs.getInt("userid"));
 			   return Sd;
 			   
 		   }
@@ -51,6 +52,7 @@ public class Mppsteacherdaoimpl implements Mppsteacherdao{
 			   paramSource.addValue("cat", Sd.getCat());
 			   paramSource.addValue("caste",Sd.getCaste());
 			   paramSource.addValue("edq", Sd.getEdq());
+			   paramSource.addValue("userid", Sd.getUserid());
 			   
 		   }
 		   
@@ -69,14 +71,14 @@ public class Mppsteacherdaoimpl implements Mppsteacherdao{
 	@Override
 	public void addMppsteacher(Mppsteacher Mppsteacher) {
 		// TODO Auto-generated method stub
-		String qry="insert into mppsteacher(mppstid,firstname,lastname,age,caste,cat,edq)) values (:mppstid,:firstname,:lastname,:age,:caste,:cat,:edq)";
+		String qry="insert into mppsteacher(mppstid,firstname,lastname,age,caste,cat,edq,userid) values (:mppstid,:firstname,:lastname,:age,:caste,:cat,:edq,:userid)";
 		npjt.update(qry, gSPBM(Mppsteacher));
 	}
 
 	@Override
 	public void updateMppsteacher(Mppsteacher Mppsteacher) {
 		// TODO Auto-generated method stub
-		String qry="UPDATE mppsteacher set firstname=:firstname,lastname=:lastname,age=:age,cat=:cat,edq=:edq where mppstid=:mppstid";
+		String qry="UPDATE mppsteacher set firstname=:firstname,lastname=:lastname,age=:age,caste=:caste,cat=:cat,edq=:edq,userid=:userid where mppstid=:mppstid";
 		npjt.update(qry, gSPBM(Mppsteacher));
 		
 	}

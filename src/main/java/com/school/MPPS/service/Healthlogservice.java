@@ -16,4 +16,7 @@ public List<Healthlog> ListallHealthlogs();
 	public void deleteHealthlog(int id);
 	
 	public Healthlog findHealthlogById(int id);
+
+
+public List<Healthlog> ListstudentHealthlogs(String id);
 }

@@ -64,7 +64,7 @@ public class Messstockdaoimpl implements Messstockdao {
 	@Override
 	public void addMessstock(Messstock Messstock) {
 		// TODO Auto-generated method stub
-		String qry="insert into messstock(msid,noeggs,month,ricekgs)) values (:msid,:noeggs,:month,:ricekgs)";
+		String qry="insert into messstock(msid,noeggs,month,ricekgs) values (:msid,:noeggs,:month,:ricekgs)";
 		npjt.update(qry, gSPBM(Messstock));
 	}
 

@@ -17,6 +17,7 @@ public Healthlog(int checkupid) {
 	super();
 	this.checkupid = checkupid;
 }
+
 public Healthlog() {
 	super();
 }
@@ -44,5 +45,9 @@ public int getSid() {
 public void setSid(int sid) {
 	this.sid = sid;
 }
+
+	public Healthlog(String sid) {
+		this.sid = Integer.parseInt(sid);
+	}
 
 }

@@ -14,6 +14,7 @@ public class Mppsteacher {
 	private String caste;
 	private String edq;
 	private String cat;
+	private int userid;
 	
 	public Mppsteacher(int mppstid) {
 		super();
@@ -21,6 +22,13 @@ public class Mppsteacher {
 	}
 	public Mppsteacher() {
 		super();
+	}
+	
+	public int getUserid() {
+		return userid;
+	}
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 	public int getMppstid() {
 		return mppstid;

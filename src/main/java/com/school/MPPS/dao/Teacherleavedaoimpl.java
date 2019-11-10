@@ -65,7 +65,7 @@ public class Teacherleavedaoimpl implements Teacherleavedao{
 	@Override
 	public void addTeacherleave(Teacherleave Teacherleave) {
 		// TODO Auto-generated method stub
-		String qry="insert into teacherleave(tlid,fromdate,todate,type,tid)) values (:tlid,:fromdate,:todate,:type,:tid)";
+		String qry="insert into teacherleave(tlid,fromdate,todate,type,tid) values (:tlid,:fromdate,:todate,:type,:tid)";
 		npjt.update(qry, gSPBM(Teacherleave));
 	}
 

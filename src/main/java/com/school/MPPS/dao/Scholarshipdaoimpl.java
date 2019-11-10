@@ -42,7 +42,7 @@ public class Scholarshipdaoimpl implements Scholarshipdao{
 		   MapSqlParameterSource paramSource =new MapSqlParameterSource();
 		   if(Sd!= null)
 		   {
-			   paramSource.addValue("Aplid",Sd.getAplid());
+			   paramSource.addValue("aplid",Sd.getAplid());
 			   paramSource.addValue("appliedamount", Sd.getAppliedamount());
 			   paramSource.addValue("grantamount",Sd.getGrantamount());
 			   paramSource.addValue("status",Sd.getStatus());
@@ -65,14 +65,14 @@ public class Scholarshipdaoimpl implements Scholarshipdao{
 	@Override
 	public void addScholarship(Scholarship Scholarship) {
 		// TODO Auto-generated method stub
-		String qry="insert into scholarship(aplid,applicationamount,grantamount,mppssid,status)) values (:aplid,:applicationamount,:grantamount,:mppssid,:status)";
+		String qry="insert into scholarship(aplid,appliedamount,grantamount,mppssid,status) values (:aplid,:appliedamount,:grantamount,:mppssid,:status)";
 		npjt.update(qry, gSPBM(Scholarship));
 	}
 
 	@Override
 	public void updateScholarship(Scholarship Scholarship) {
 		// TODO Auto-generated method stub
-		String qry="UPDATE scholarship set applicationamount=:applicationamount,grantamount=:grantamount,mppssid=:mppssid,status=:status where aplid=:aplid";
+		String qry="UPDATE scholarship set appliedamount=:appliedamount,grantamount=:grantamount,mppssid=:mppssid,status=:status where aplid=:aplid";
 		npjt.update(qry, gSPBM(Scholarship));
 	}
 

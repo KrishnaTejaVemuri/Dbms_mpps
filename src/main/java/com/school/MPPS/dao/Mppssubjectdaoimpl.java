@@ -64,7 +64,7 @@ public class Mppssubjectdaoimpl implements Mppssubjectdao{
 	@Override
 	public void addMppssubject(Mppssubject Mppssubject) {
 		// TODO Auto-generated method stub
-		String qry="insert into mppssubject(subid,classid,mppstid,subjectname)) values (:subid,:classid,:mppstid,:subjectname)";
+		String qry="insert into mppssubject(subid,classid,mppstid,subjectname) values (:subid,:classid,:mppstid,:subjectname)";
 		npjt.update(qry, gSPBM(Mppssubject));
 	}
 

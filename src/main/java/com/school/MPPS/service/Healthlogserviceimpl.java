@@ -2,12 +2,12 @@ package com.school.MPPS.service;
 
 import java.util.List;
 
+import com.school.MPPS.Model.Healthlog;
+import com.school.MPPS.dao.Healthlogdao;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
-import com.school.MPPS.Model.Healthlog;
-import com.school.MPPS.dao.Healthlogdao;
 
 @Service
 @Component
@@ -47,5 +47,9 @@ public Healthlog findHealthlogById(int id) {
 	// TODO Auto-generated method stub
 	return hld.findHealthlogById(id);
 }
-
+@Override
+public List<Healthlog> ListstudentHealthlogs(String id) {
+	// TODO Auto-generated method stub
+	return hld.ListstudentHealthlogs(id);
+}
 }

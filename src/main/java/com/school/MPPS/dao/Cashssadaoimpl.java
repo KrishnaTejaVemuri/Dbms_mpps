@@ -65,7 +65,7 @@ public class Cashssadaoimpl implements Cashssadao{
 	@Override
 	public void addcashssa(Cashssa cashssa) {
 		// TODO Auto-generated method stub
-		String qry="insert into cashssa(sgid,month,maintainancegrant,schoolgrant)) values (:sgid,:month,:maintainancegrant,:schoolgrant)";
+		String qry="insert into cashssa(sgid,month,maintainancegrant,schoolgrant) values (:sgid,:month,:maintainancegrant,:schoolgrant)";
 		npjt.update(qry, gSPBM(cashssa));
 	}
 

@@ -17,4 +17,5 @@ public List<Healthlog> ListallHealthlogs();
 	
 	public Healthlog findHealthlogById(int id);
 
+public List<Healthlog> ListstudentHealthlogs(String id);
 }
